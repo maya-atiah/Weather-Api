@@ -1,6 +1,9 @@
 body{
   background-color: #9ccef4;
   margin: 0px;
+
+font-family: 'Raleway', sans-serif;
+  
 }
 header{
   background-color: #759eda;
@@ -18,12 +21,14 @@ header > input {
   color: #ffffff;
   border:none;
   font-size: 20px;
+  margin-left: 20px;
 }
 header > button{
   height: 50px;
   width: 150px;
   border: none;
   background-color: #5879c7;
+  font-size: 15px;;
 }
 input:focus{
   outline: none;
@@ -66,6 +71,7 @@ left:50%
 .lower-block{
   display: flex;
   justify-content: center;
+  
 }
 
 .lower-block img{
