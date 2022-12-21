@@ -21,7 +21,7 @@ export default function Lower() {
                     let weather = x.weather[0].main === 'Clear' ? Clear : x.weather[0].main === 'Rain' ? Rain :  clouds;
 
                     return (
-                        <div key={x.dt}>
+                        <div >
                             <span>{x.dt_txt}</span>
                             <img src={weather} alt="cloudy" />
                             <span>{x.main.temp} </span>
