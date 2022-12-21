@@ -1,8 +1,8 @@
 
 import './App.css';
-import Header from './Header'
-import Middle from './Middle';
-import Lower from './Lower';
+import Header from './components/Header'
+import Middle from './components/Middle';
+import Lower from './components/Lower';
 
 function App() {
   return (

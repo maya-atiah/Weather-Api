@@ -1,6 +1,6 @@
 import React from "react";
-import cloudy from "./images/weather-icons/cloudy.svg";
-import clear from "./images/weather-icons/clear.svg";
+import cloudy from "../images/weather-icons/cloudy.svg";
+import clear from "../images/weather-icons/clear.svg";
 
 export default function Lower (){
     return(

@@ -1,5 +1,5 @@
 import React from "react";
-import storm from "./images/weather-icons/storm.svg";
+import storm from "../images/weather-icons/storm.svg";
 
 export default function Middle (){
     return(
