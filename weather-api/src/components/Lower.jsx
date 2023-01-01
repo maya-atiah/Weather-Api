@@ -4,19 +4,19 @@ import Rain from "../images/weather-icons/Rain.svg";
 import clouds from "../images/weather-icons/mostlycloudy.svg";
 import FakeWeather from "../data/FakeWeather.json";
 
-export default function Lower() {
+export default function Lower({lowerData}) {
 
     return (
 
         <div className="lower-block">
 
-            {
-                console.log(FakeWeather.list)
+             {
+                console.log(lowerData)
             }
 
             {
 
-                FakeWeather && FakeWeather.list.map(x => {
+                lowerData && lowerData.list.map(x => {
 
                     let weather = x.weather[0].main === 'Clear' ? Clear : x.weather[0].main === 'Rain' ? Rain :  clouds;
 
@@ -28,10 +28,8 @@ export default function Lower() {
                         </div>
                     )
                 })
-            }
+            } 
 
         </div>
     )
-
-}
-
+          }
