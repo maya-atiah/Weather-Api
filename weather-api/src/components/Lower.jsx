@@ -34,7 +34,9 @@ export default function Lower({ lowerData }) {
           image = partlycloudy;
         } else image = unknown;
         return <img src={image} />;
+        
       };
+
   return (
     <div className="lower-block">
       {console.log(lowerData)}
