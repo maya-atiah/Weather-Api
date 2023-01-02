@@ -83,6 +83,7 @@ left:50%
   text-align: center;
   color: #030348;
   font-size: 15px;
+  justify-content: space-between;
 
 }
 .button:hover {

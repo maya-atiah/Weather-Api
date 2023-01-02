@@ -1,17 +1,28 @@
 import React from "react";
-import storm from "../images/weather-icons/storm.svg";
+import clear from "../images/weather-icons/Clear.svg";
+import FakeWeather from "../data/FakeWeather.json";
 
 export default function Middle (){
+
+const currentFakeWeather= FakeWeather && FakeWeather.list[0]
+
     return(
 
     <div >     
-    <div className="block"></div>   
-    <img src={storm} alt="storm icon" />   
-    <h3 className="h3--middle">overcast clouds</h3>
-   <h2 className="h2--middle">Temperature 10 to 11 C</h2>
+       {
+                console.log(FakeWeather.list)
+            }
+              {
 
-   <h4 className="h4--middle">Humidity 78%  pressure 1008.4</h4>
-   <div className="block"></div>   
+FakeWeather && (
+  <div>
+    <div className="block"></div>   
+    <img src={clear} alt="storm icon" />   
+    <h3 className="h3--middle">{currentFakeWeather.weather[0].main}</h3>
+   <h2 className="h2--middle">Temperature {currentFakeWeather.main.temp_min} to {currentFakeWeather.main.temp_max}</h2>
+
+   <h4 className="h4--middle">Humidity {currentFakeWeather.main.humidity}  pressure {currentFakeWeather.main.pressure}</h4>
+   <div className="block"></div> </div>  )}
     </div>
 
 
