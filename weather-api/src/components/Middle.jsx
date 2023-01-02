@@ -7,32 +7,32 @@ import rain from "../images/weather-icons/Rain.svg";
 import snow from "../images/weather-icons/snow.svg";
 import storm from "../images/weather-icons/storm.svg";
 import unknown from "../images/weather-icons/unknown.svg";
+import partlycloudy from "../images/weather-icons/partlycloudy.svg";
 
 export default function Middle({ middleData }) {
-
-
   const currentWeather = middleData && middleData.list[0];
 
+ // Matching up the weather id with the appropriate icon
 
-
-  const imageFunction = (x) => {
-
+  const imageFunction = (id) => {
     let image;
 
-    if (x === "Clear") {
+    if (id === 800) {
       image = clear;
-    } else if (x === "Drizzle") {
+    } else if (id >= 300 && id < 499) {
       image = drizzle;
-    } else if (x === "Fog") {
+    } else if (id >= 700 && id < 799) {
       image = fog;
-    } else if (x === "Clouds") {
+    } else if (id > 801 && id < 805) {
       image = mostlycloudy;
-    } else if (x === "Rain") {
+    } else if (id >= 500 && id < 599) {
       image = rain;
-    } else if (x === "Storm") {
+    } else if (id < 300) {
       image = storm;
-    } else if (x === "Snow") {
+    } else if (id >= 600 && id < 699) {
       image = snow;
+    } else if (id === 801) {
+      image = partlycloudy;
     } else image = unknown;
     return <img src={image} />;
   };
@@ -41,12 +41,9 @@ export default function Middle({ middleData }) {
     <div>
       {console.log(currentWeather)}
       {currentWeather && (
-        <div>
+        <div key={currentWeather.dt}>
           <div className="block"></div>
-          <div>
-            {" "}
-           {imageFunction(currentWeather.weather[0].main)} 
-          </div>
+          <div> {imageFunction(currentWeather.weather[0].id)}</div>
           <h3 className="h3--middle">
             {" "}
             {currentWeather.weather[0].discription}
